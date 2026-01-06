@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson's Hay Day Orders</title>
-    <link rel="icon" type="image/png" href="yeahyeahyeahs.png">
+    <title>Hay Day Orders</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             background-color: #fcf4e4; 
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
             margin: 0;
         }
@@ -23,6 +23,7 @@
             border-radius: 15px; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
             border: 2px solid #e0d5c1;
+            box-sizing: border-box;
         }
 
         h2 { color: #5d4037; text-align: center; margin-top: 0; }
@@ -58,9 +59,18 @@
             font-weight: bold;
             cursor: pointer;
             transition: background 0.2s;
+            margin-bottom: 10px;
         }
 
         button:active { background-color: #388E3C; transform: scale(0.98); }
+
+        .nav-button {
+            background-color: #795548;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -78,6 +88,7 @@
     <textarea id="orderDetail" placeholder="List items (e.g. 10x Corn, 2x Jam)"></textarea>
 
     <button onclick="sendOrder()">Order</button>
+    <a href="me.html" style="text-decoration: none;"><button class="nav-button" type="button">My Farm</button></a>
 </div>
 
 <script>
